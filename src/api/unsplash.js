@@ -1,9 +1,9 @@
 import axios from 'axios';
-import config from '../config'
+const config = require('../config.json')
 export default axios.create({
   baseURL: 'https://api.unsplash.com/',
   headers: {
     Authorization:
-      config().token
+      config.token
   }
 });
